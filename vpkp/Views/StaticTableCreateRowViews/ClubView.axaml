@@ -1,0 +1,29 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="vpkp.Views.StaticTableCreateRowViews.ClubView"
+        Background="Pink"
+        Title="ClubView">
+  <Window.Styles>
+    <Style Selector="Button.b2">
+      <Setter Property="VerticalAlignment" Value="Stretch"/>
+      <Setter Property="VerticalContentAlignment" Value="Center"/>
+      <Setter Property="HorizontalAlignment" Value="Stretch"/>
+      <Setter Property="HorizontalContentAlignment" Value="Center"/>
+      <Setter Property="Background" Value="LightGray"/>
+      <Setter Property="BorderThickness" Value="1"/>
+      <Setter Property="BorderBrush" Value="Gray"/>
+    </Style>
+  </Window.Styles>
+  <Grid RowDefinitions="*,*,*,*,*,0.4*,0.4*">
+    <TextBox Grid.Row="0" Text="{Binding Club.ClubId}" Watermark="ClubId"></TextBox>
+    <TextBox Grid.Row="1" Text="{Binding Club.PlayersAmount}" Watermark="PlayersAmount"></TextBox>
+    <TextBox Grid.Row="2" Text="{Binding Club.Division}" Watermark="Division"></TextBox>
+    <TextBox Grid.Row="3" Text="{Binding Club.Titile}" Watermark="Title"></TextBox>
+    <TextBox Grid.Row="4" Text="{Binding Club.CityId}" Watermark="CityId"></TextBox>
+    <Button Classes="b2" Grid.Row="5" Background="DarkSalmon" Content="Confirm" Name="Confirm"></Button>
+    <Button Classes="b2" Grid.Row="6" Background="LightGreen" Content="Cancel" Name="Cancel"></Button>
+  </Grid>
+</Window>
